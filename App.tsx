@@ -47,12 +47,12 @@ export default function App() {
         <View style={styles.flex}>
           <TextInput placeholder='Digite seu peso'
             keyboardType={'numeric'}
-            onChangeText={(peso) => setPeso(Number(peso))}
+            onChangeText={(peso) => setPeso(Number(peso.replace(',', '.')))}
             style={styles.textInput}>
           </TextInput>
           <TextInput placeholder='Digite sua altura'
             keyboardType={'numeric'}
-            onChangeText={(altura) => setAltura(Number(altura))}
+            onChangeText={(altura) => setAltura(Number(altura.replace(',', '.')))}
             style={styles.textInput}>
           </TextInput>
         </View>
